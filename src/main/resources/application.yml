@@ -12,19 +12,7 @@ logging:
   level:
     org:
       springframework:
-        security:
-          config:
-            annotation:
-              web:
-                configurers:
-                  oauth2:
-                    server:
-                      resource:
-                        OAuth2ResourceServerConfigurer: ${LOG_LEVEL:DEBUG}
-          oauth2:
-            client:
-              userinfo:
-                DefaultOAuth2UserService: ${LOG_LEVEL:DEBUG}
+        security: ${LOG_LEVEL:DEBUG}
         web:
           client:
             RestTemplate: ${LOG_LEVEL:DEBUG}
