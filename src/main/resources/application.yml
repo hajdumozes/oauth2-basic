@@ -1,0 +1,30 @@
+server:
+  port: 8081
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          client-id: testclient
+          client-secret: w6Nia5BQvEH3OVcI5aMqfcjI1xzvdcqD
+          introspection-uri: http://localhost:8080/realms/testrealm/protocol/openid-connect/token/introspect
+logging:
+  level:
+    org:
+      springframework:
+        security:
+          config:
+            annotation:
+              web:
+                configurers:
+                  oauth2:
+                    server:
+                      resource:
+                        OAuth2ResourceServerConfigurer: DEBUG
+          oauth2:
+            client:
+              userinfo:
+                DefaultOAuth2UserService: DEBUG
+        web:
+          client:
+            RestTemplate: DEBUG
