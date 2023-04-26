@@ -1,13 +1,13 @@
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
 spring:
   security:
     oauth2:
       resourceserver:
         opaquetoken:
-          client-id: testclient
-          client-secret: w6Nia5BQvEH3OVcI5aMqfcjI1xzvdcqD
-          introspection-uri: http://localhost:8080/realms/testrealm/protocol/openid-connect/token/introspect
+          client-id: ${CLIENT_ID}
+          client-secret: ${CLIENT_SECRET}
+          introspection-uri: ${INTROSPECTION_URI}
 logging:
   level:
     org:
@@ -20,11 +20,11 @@ logging:
                   oauth2:
                     server:
                       resource:
-                        OAuth2ResourceServerConfigurer: DEBUG
+                        OAuth2ResourceServerConfigurer: ${LOG_LEVEL:DEBUG}
           oauth2:
             client:
               userinfo:
-                DefaultOAuth2UserService: DEBUG
+                DefaultOAuth2UserService: ${LOG_LEVEL:DEBUG}
         web:
           client:
-            RestTemplate: DEBUG
+            RestTemplate: ${LOG_LEVEL:DEBUG}

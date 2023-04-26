@@ -1,4 +1,4 @@
-package hu.areus.oauth2.demo;
+package hu.areus.oauth2.basic.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +26,6 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests().anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().oauth2ResourceServer(OAuth2ResourceServerConfigurer::opaqueToken);
-
         return http.build();
     }
 
