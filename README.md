@@ -16,3 +16,17 @@
 | `CLIENT_SECRET`     | string |               | can be claimed after setting the client to have authentication and authorization (making it not public) |
 | `INTROSPECTION_URI` | string |               | The pattern is: {server}/realms/{realm}/protocol/openid-connect/token/introspect                        |
 | `LOG_LEVEL`         | string | DEBUG         |                                                                                                         |
+
+
+### Usage
+
+First a token must be claimed with a POST request 
+  - example url: `http://localhost:8080/realms/{realm}/protocol/openid-connect/token`
+  - in the request body the following parameters need to be given in `x-www-form-urlencoded` format:
+    - `client_id`
+    - `username`
+    - `password`
+    - `grant_type`
+    - `client_secret`
+
+Then the controller endpoints can be called with the given token
