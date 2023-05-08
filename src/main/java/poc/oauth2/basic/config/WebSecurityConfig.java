@@ -1,4 +1,4 @@
-package hu.areus.oauth2.basic.config;
+package poc.oauth2.basic.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

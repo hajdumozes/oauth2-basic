@@ -14,7 +14,7 @@
 | `SERVER_PORT`       | string | 8081          |                                                                                                         |
 | `CLIENT_ID`         | string |               |                                                                                                         |
 | `CLIENT_SECRET`     | string |               | can be claimed after setting the client to have authentication and authorization (making it not public) |
-| `INTROSPECTION_URI` | string |               | The pattern is: {server}/realms/{realm}/protocol/openid-connect/token/introspect                        |
+| `INTROSPECTION_URI` | string | ``            | The pattern is: {server}/realms/{realm}/protocol/openid-connect/token/introspect                        |
 | `LOG_LEVEL`         | string | DEBUG         |                                                                                                         |
 
 

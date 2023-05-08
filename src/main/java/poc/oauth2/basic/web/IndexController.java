@@ -1,4 +1,4 @@
-package hu.areus.oauth2.basic.web;
+package poc.oauth2.basic.web;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;

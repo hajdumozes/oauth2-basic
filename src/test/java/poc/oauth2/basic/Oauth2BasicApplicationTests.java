@@ -1,4 +1,4 @@
-package hu.areus.oauth2.basic;
+package poc.oauth2.basic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
